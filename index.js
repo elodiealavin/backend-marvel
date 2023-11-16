@@ -17,7 +17,7 @@ app.use(charactersRoutes);
 app.use(characterRoutes);
 
 app.get("/", (req, res) => {
-  //   console.log("test");
+  console.log("Welcome 👩🏻‍💻");
 });
 
 app.all("*", (req, res) => {
