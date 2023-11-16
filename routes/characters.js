@@ -4,10 +4,9 @@ const axios = require("axios");
 
 router.get("/characters", async (req, res) => {
   try {
+    //condition pagination if/else
     const limit = req.query.limit || 100;
     const skip = req.query.skip || 0;
-
-    //condition pagination if/else
 
     const response = await axios.get(
       `https://lereacteur-marvel-api.herokuapp.com/characters?limit=${limit}&skip=${skip}&apiKey=${process.env.API_KEY}`
